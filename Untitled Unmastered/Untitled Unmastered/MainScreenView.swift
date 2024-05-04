@@ -24,8 +24,20 @@ struct MainScreenView: View {
         }
     }
 }
+private let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    return formatter
+}()
+
 private func eventList(event:Event) -> some View{
     VStack(alignment:.leading){
+        Text(dateFormatter.string(from: event.deadline))
+                    .font(.system(size: 20, weight: .bold, design: .monospaced))
+                    .foregroundStyle(.red)
+                   // .font(.color(.red))
+
         Text(event.name)
             .font(.largeTitle)
         HStack{
