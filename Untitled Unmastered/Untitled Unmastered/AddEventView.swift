@@ -15,6 +15,13 @@ struct AddEventView: View {
     let priorities = ["Very High", "High","Medium","Low","Very Low"]
     @State private var deadline = Date.now
 //    @State private var event = false
+    private var addEvent: some View{
+        Button("Add Event"){NetworkManager.shared.addToList(user: thisUser, event: Event(name: name, deadline: deadline, priority: priorities.firstIndex(of: priority) ?? 0, timeToComplete: duration, done: false)) { event in
+        }
+        name = ""}
+            .buttonStyle(.borderedProminent)
+            .padding(25)
+    }
     var body: some View {
         VStack{
             nameTask
@@ -65,11 +72,7 @@ struct AddEventView: View {
     }
 
 }
-    private var addEvent: some View{
-        Button("Add Event"){}
-            .buttonStyle(.borderedProminent)
-            .padding(25)
-    }
+
 
 
 

@@ -6,13 +6,12 @@
 //
 import SwiftUI
 let priorities = ["Very High", "High","Medium","Low","Very Low"]
-
+//@EnvironmentObject var thisUser: User
 
 struct MainScreenView: View {
-    @Environment(\.User) var user
     var body: some View {
         NavigationView { // <1>
-            List(testUser.events, id: \.self) { event in
+            List(thisUser.events, id: \.self) { event in
                 eventList(event: event)
             }                .navigationBarTitleDisplayMode(.inline)
                 .toolbar { // <2>

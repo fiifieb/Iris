@@ -18,9 +18,9 @@ class NetworkManager {
     /**
      Fetch user information from the backend
      */
-    func fetchAccount(user: loginInfo, completion: @escaping (User) -> Void){
+    func fetchAccount(userInfo: loginInfo, completion: @escaping (User) -> Void){
         // Specify the endpoint
-        let endpoint = " /users/username/\(user.username)/" //Endpoint
+        let endpoint = " /users/username/\(userInfo.username)/" //Endpoint
 
         // Create a decoder
         let decoder = JSONDecoder()

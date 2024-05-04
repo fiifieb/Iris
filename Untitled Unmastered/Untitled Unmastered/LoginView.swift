@@ -11,8 +11,11 @@ struct LoginView: View {
     @State private var username = ""
     @State private var password = ""
     @State private var profile = false
-    func login(info:loginInfo){
-        NetworkManager.shared.fetchAccount(user: info) { user in
+//    @Environment var user: User
+    func login(){
+        let info = loginInfo(username: username, password: password)
+        NetworkManager.shared.fetchAccount(userInfo: info) { user in
+        thisUser=user
         }
     }
   //  let blue = Color(hue: 0.9, saturation: 0.8, brightness: 0.9, opacity: 1)
@@ -27,18 +30,20 @@ struct LoginView: View {
         VStack{
             HStack{
                 Text("Username: ")
-                TextField("Username", text: $username)
+                TextField("Username", text: $username).autocapitalization(.none)
             }.padding(15)
             HStack{
                 Text("Password: ")
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password).autocapitalization(.none)
             }.padding(15)
+//                .autocapitalization(.none)
         }
             //.background(.blue)
         NavigationLink{
             TabBarViewController()
+                .navigationBarBackButtonHidden(true)
         }label:{
-            loginButton}.gesture(TapGesture().onEnded{login(info: loginInfo(username: username, password: password))})
+            loginButton}.gesture(TapGesture().onEnded{login()})
         ZStack {
                 Rectangle()
                     .fill(Gradient(colors: [.white, .blue]))

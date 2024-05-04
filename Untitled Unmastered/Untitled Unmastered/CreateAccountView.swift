@@ -13,8 +13,9 @@ struct CreateAccountView: View {
 //    @State private var user:User
     private func createUser(){
         let user = loginInfo(username: username, password: password)
-        NetworkManager.shared.createNewUser(info: user){user in }
-        NetworkManager.shared.fetchAccount(user: user){user in }
+        NetworkManager.shared.createNewUser(info: user){user in}
+        NetworkManager.shared.fetchAccount(userInfo: user){user in
+        thisUser=user}
     }
     private var logoPic: some View{
         HStack{
@@ -46,6 +47,7 @@ struct CreateAccountView: View {
 
             NavigationLink{
                 TabBarViewController()
+                    .navigationBarBackButtonHidden(true)
             }label:{
                 newAccountButton}.gesture(TapGesture().onEnded{createUser()})
         }}
