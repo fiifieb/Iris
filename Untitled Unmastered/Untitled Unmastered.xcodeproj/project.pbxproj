@@ -19,6 +19,7 @@
 		04249C062BDAB0840059AD42 /* SelectLoginOrCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04249C052BDAB0840059AD42 /* SelectLoginOrCreateView.swift */; };
 		04249C082BDAB0B00059AD42 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04249C072BDAB0B00059AD42 /* MainScreenView.swift */; };
 		04249C0A2BDAB0CE0059AD42 /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04249C092BDAB0CE0059AD42 /* AddEventView.swift */; };
+		04689C462BE67F3600DC3221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04689C452BE67F3600DC3221 /* ViewController.swift */; };
 		04D150B32BDD9FD70070B635 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D150B22BDD9FD70070B635 /* Model.swift */; };
 		04D150B62BDDA13B0070B635 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04D150B52BDDA13B0070B635 /* Alamofire */; };
 		04D150B82BDDA13B0070B635 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 04D150B72BDDA13B0070B635 /* AlamofireDynamic */; };
@@ -40,6 +41,7 @@
 		04249C052BDAB0840059AD42 /* SelectLoginOrCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLoginOrCreateView.swift; sourceTree = "<group>"; };
 		04249C072BDAB0B00059AD42 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		04249C092BDAB0CE0059AD42 /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		04689C452BE67F3600DC3221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04D150B22BDD9FD70070B635 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		04D150B92BDDA1580070B635 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				04249BEB2BDAAF000059AD42 /* AppDelegate.swift */,
 				04249BED2BDAAF000059AD42 /* SceneDelegate.swift */,
 				04249BF12BDAAF000059AD42 /* Main.storyboard */,
+				04689C452BE67F3600DC3221 /* ViewController.swift */,
 				04249BF42BDAAF040059AD42 /* Assets.xcassets */,
 				04249BF62BDAAF040059AD42 /* LaunchScreen.storyboard */,
 				0419575E2BE5FCB8006FC734 /* ContentView.swift */,
@@ -179,6 +182,7 @@
 				04249C002BDAAFC50059AD42 /* TabBarViewController.swift in Sources */,
 				04249BEC2BDAAF000059AD42 /* AppDelegate.swift in Sources */,
 				04249C062BDAB0840059AD42 /* SelectLoginOrCreateView.swift in Sources */,
+				04689C462BE67F3600DC3221 /* ViewController.swift in Sources */,
 				04249C082BDAB0B00059AD42 /* MainScreenView.swift in Sources */,
 				04249C022BDAB01A0059AD42 /* LoginView.swift in Sources */,
 				04D150B32BDD9FD70070B635 /* Model.swift in Sources */,

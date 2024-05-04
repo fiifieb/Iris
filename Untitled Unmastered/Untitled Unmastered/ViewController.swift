@@ -2,18 +2,22 @@
 //  ViewController.swift
 //  Untitled Unmastered
 //
-//  Created by Fiifi Botchway on 4/25/24.
+//  Created by Fiifi Botchway on 5/4/24.
 //
 
+import Foundation
 import UIKit
-
-class ViewController: UITabBarController {
+import SwiftUI
+class ViewController: UIViewController {
+     var theContainer = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let childView = UIHostingController(rootView: ContentView())
+        addChild(childView)
+        childView.view.frame = theContainer.bounds
+        theContainer.addSubview(childView.view)
+        childView.didMove(toParent: self)
     }
-
-
 }
-
