@@ -10,6 +10,8 @@ import SwiftUI
 struct CreateAccountView: View {
     @State private var username = ""
     @State private var password = ""
+    @State private var passwordConfirm = ""
+
 //    @State private var user:User
     private func createUser(){
         let user = loginInfo(username: username, password: password)
@@ -35,14 +37,16 @@ struct CreateAccountView: View {
                     Text("Username: ")
                     TextField("Username", text: $username)
                 }.padding(15)
+                    .autocapitalization(.none)
                 HStack{
                     Text("Password: ")
-                    TextField("Password", text: $password)
+                    SecureField("Password", text: $password)
                 }.padding(15)
+                    .autocapitalization(.none)
                 HStack{
                     Text("Confirm Password: ")
-                    TextField("Password", text: $password)
-                }.padding(15)
+                    SecureField("Password", text: $passwordConfirm)
+                }.padding(15).autocapitalization(.none)
             }
 
             NavigationLink{

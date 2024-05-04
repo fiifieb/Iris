@@ -13,12 +13,15 @@ import Foundation
         let priority: Int
         let timeToComplete: String
         var done: Bool
+        mutating func markAsCompleted(){
+            done=true
+        }
     }
 class User: ObservableObject, Codable{
     var username = ""
     var password = ""
     var id = 0
-    var events: [Event] = []
+    var events: [Event] = dummyData
     enum CodingKeys:String, CodingKey {
         case events = "tasks"
         case username = "name"
@@ -29,6 +32,7 @@ class User: ObservableObject, Codable{
         let username: String
         let password: String
     }
+
 var thisUser = User()
 //    @Published var userLoginInfo = loginInfo(username: "", password: "")
 //}

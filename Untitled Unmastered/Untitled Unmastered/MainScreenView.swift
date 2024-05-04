@@ -46,7 +46,7 @@ private func eventList(event:Event) -> some View{
 }
 private func completionButton(event:Event)-> some View{
     Button{
-//        event.isCompleted = true
+        thisUser.events[thisUser.events.firstIndex(of: event) ?? 0].markAsCompleted()
     }label: {
         Text("Mark as completed")
             .font(.body)

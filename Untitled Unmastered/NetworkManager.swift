@@ -24,7 +24,6 @@ class NetworkManager {
 
         // Create a decoder
         let decoder = JSONDecoder()
-        // decoder.keyDecodingStrategy = .convertFromSnakeCase // Only if needed
 
         // Create the request
         AF.request(endpoint, method: .get)
@@ -51,8 +50,6 @@ class NetworkManager {
 
         // Create a decoder
         let decoder = JSONDecoder()
-        // decoder.dateDecodingStrategy = .iso8601 // Only if needed
-        // decoder.keyDecodingStrategy = .convertFromSnakeCase // Only if needed
 
         // Create the request
         AF.request(endpoint, method: .get)
@@ -90,8 +87,6 @@ class NetworkManager {
 
         // Create a decoder
         let decoder = JSONDecoder()
-        // decoder.dateDecodingStrategy = .iso8601 // Only if needed
-        // decoder.keyDecodingStrategy = .convertFromSnakeCase // Only if needed
 
         // Create the request
         AF.request(endpoint, method: .post, parameters: parameters, encoding: JSONEncoding.default)
@@ -119,8 +114,6 @@ class NetworkManager {
 
         // Create a decoder
         let decoder = JSONDecoder()
-        // decoder.dateDecodingStrategy = .iso8601 // Only if needed
-        // decoder.keyDecodingStrategy = .convertFromSnakeCase // Only if needed
 
         // Create the request
         AF.request(endpoint, method: .post, parameters: parameters, encoding: JSONEncoding.default)
