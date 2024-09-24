@@ -44,12 +44,12 @@
 
 2. Install the backend dependencies:
     ```bash
-    pip install -r backend/requirements.txt
+    pip install -r final-appdev-main/requirements.txt
     ```
 
 3. Run the Flask backend:
     ```bash
-    cd backend
+    cd final-appdev-main
     flask run
     ```
 
